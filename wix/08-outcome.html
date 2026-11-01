@@ -195,55 +195,53 @@ p:last-child{margin-bottom:0}
 }
 @media(max-width:600px){
   .wrap{width:calc(100% - 32px)}
-  .results{grid-template-columns:1fr}
-  .results div+div{padding-left:0;border-left:0;border-top:1px solid var(--rule);margin-top:18px}
-  .ind-row{grid-template-columns:1fr 1fr}
-  .swatches{grid-template-columns:repeat(3,1fr)}
-  .compare{aspect-ratio:4/3}
+  .sec{padding:44px 0}
+  h2{font-size:21px;line-height:1.25}
+  p{font-size:14px;line-height:1.6;margin-bottom:10px}
+  .label{font-size:10px;margin-bottom:10px}
+  .split .body{margin-top:10px}
+  .hero{margin-top:16px}
+  .hero .media{border-radius:10px}
+  .title{padding-top:28px}
+  .title .logo{height:22px}
+  .title .sub{margin-top:12px;font-size:16px}
+  .meta{gap:16px 20px;margin-top:24px;padding:18px 0}
+  .meta dt{font-size:9.5px;margin-bottom:6px}
+  .meta dd{font-size:13px;line-height:1.5}
+  .status{padding-top:16px;gap:12px}
+  .status p{font-size:13px}
+  .btn{padding:10px 16px;font-size:13px}
+  .results{margin-top:28px}
+  .results div{padding:16px 10px 0 0}
+  .results div+div{padding-left:10px}
+  .results b{font-size:19px}
+  .results span{font-size:9px;letter-spacing:.06em}
+  .compare{aspect-ratio:4/3;margin-top:24px;border-radius:10px}
+  .frame--page{margin-top:24px}
+  .scroller{height:440px}
+  .cap{font-size:10px}
+  .closing{margin-top:32px!important}
+  .closing .media{border-radius:10px}
 }
 </style>
 <style>html,body{overflow:hidden;background:transparent}main{display:block}</style>
 </head>
 <body>
 <main>
-<section class="sec" style="background:#fff">
+<section class="sec">
   <div class="wrap">
     <div class="split" data-reveal>
-      <p class="label">Visual language</p>
-      <h2>Blueprint details on light surfaces</h2>
+      <p class="label">Outcome</p>
+      <h2>Now live at Beskar</h2>
       <div class="body">
-        <p>Mono labels, sheet numbers and dimension lines from the blueprint, set on white with one teal accent.</p>
+        <p>When Aether's founders split, the team moved to Beskar and kept the Technology and Services pages.</p>
+        <a class="btn btn--solid" href="https://beskar.co/" target="_blank" rel="noopener">Explore beskar.co ↗</a>
+        <p class="cap" style="margin-top:14px">Images show my original Aether work.</p>
       </div>
     </div>
-    <figure class="sheet" data-reveal>
-      <div class="sheet-art"><i class="rm tl"></i><i class="rm tr"></i><i class="rm bl"></i><i class="rm br"></i><img src="media/cutaway.webp" alt="Cutaway illustration of the automated production cell" loading="lazy"></div>
-      <div class="sheet-tb">
-        <div><span>Drawing</span><b>AE-CELL-01</b></div>
-        <div><span>Subject</span><b>Automation cell</b></div>
-        <div><span>Projection</span><b>Iso · dimetric</b></div>
-        <div><span>Rev</span><b>C</b></div>
-      </div>
+    <figure class="closing" data-reveal style="margin:clamp(48px,6vw,72px) 0 0">
+      <div class="media"><video data-inview muted loop playsinline preload="none" poster="media/closing.webp" aria-label="The Aether home page on a laptop"><source src="media/closing.mp4" type="video/mp4"></video></div>
     </figure>
-    <div class="specs">
-      <div class="spec-type" data-reveal>
-        <span class="spec-k">Typography</span>
-        <div class="spec-big">One Blueprint. <b>Every Factory.</b></div>
-        <div class="spec-rows">
-          <div><b>Montserrat</b><span>300 / 600 · headings, body</span></div>
-          <div><b class="mono">JetBrains Mono</b><span>400 · labels, data, drawing notes</span></div>
-        </div>
-      </div>
-      <div class="spec-pal" data-reveal style="--d:.08s">
-        <span class="spec-k">Colour · WCAG AA</span>
-        <div class="bar">
-          <i style="flex:44;background:#EFF2F3"></i><i style="flex:22;background:#13242E"></i><i style="flex:16;background:#135B7C"></i><i style="flex:11;background:#5FA8CC"></i><i style="flex:7;background:#2D7B51"></i>
-        </div>
-        <div class="bar-k">
-          <div style="flex:44"><b>Paper</b><span>#EFF2F3</span></div><div style="flex:22"><b>Ink</b><span>#13242E</span></div><div style="flex:16"><b>Teal</b><span>#135B7C</span></div><div style="flex:11"><b>Line</b><span>#5FA8CC</span></div><div style="flex:7"><b>Signal</b><span>#2D7B51</span></div>
-        </div>
-        <p class="spec-note">Bar widths show how much each colour is used.</p>
-      </div>
-    </div>
   </div>
 </section>
 </main>

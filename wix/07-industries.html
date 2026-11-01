@@ -195,11 +195,33 @@ p:last-child{margin-bottom:0}
 }
 @media(max-width:600px){
   .wrap{width:calc(100% - 32px)}
-  .results{grid-template-columns:1fr}
-  .results div+div{padding-left:0;border-left:0;border-top:1px solid var(--rule);margin-top:18px}
-  .ind-row{grid-template-columns:1fr 1fr}
-  .swatches{grid-template-columns:repeat(3,1fr)}
-  .compare{aspect-ratio:4/3}
+  .sec{padding:44px 0}
+  h2{font-size:21px;line-height:1.25}
+  p{font-size:14px;line-height:1.6;margin-bottom:10px}
+  .label{font-size:10px;margin-bottom:10px}
+  .split .body{margin-top:10px}
+  .hero{margin-top:16px}
+  .hero .media{border-radius:10px}
+  .title{padding-top:28px}
+  .title .logo{height:22px}
+  .title .sub{margin-top:12px;font-size:16px}
+  .meta{gap:16px 20px;margin-top:24px;padding:18px 0}
+  .meta dt{font-size:9.5px;margin-bottom:6px}
+  .meta dd{font-size:13px;line-height:1.5}
+  .status{padding-top:16px;gap:12px}
+  .status p{font-size:13px}
+  .btn{padding:10px 16px;font-size:13px}
+  .results{margin-top:28px}
+  .results div{padding:16px 10px 0 0}
+  .results div+div{padding-left:10px}
+  .results b{font-size:19px}
+  .results span{font-size:9px;letter-spacing:.06em}
+  .compare{aspect-ratio:4/3;margin-top:24px;border-radius:10px}
+  .frame--page{margin-top:24px}
+  .scroller{height:440px}
+  .cap{font-size:10px}
+  .closing{margin-top:32px!important}
+  .closing .media{border-radius:10px}
 }
 </style>
 <style>html,body{overflow:hidden;background:transparent}main{display:block}</style>
@@ -209,21 +231,15 @@ p:last-child{margin-bottom:0}
 <section class="sec">
   <div class="wrap">
     <div class="split" data-reveal>
-      <p class="label">Outcome</p>
-      <h2>Now live at Beskar</h2>
+      <p class="label">Industries · added at Beskar</p>
+      <h2>Real parts for each sector</h2>
       <div class="body">
-        <p>When Aether's founders split, the team moved to Beskar and kept the Technology and Services pages.</p>
-        <ul class="ticks">
-          <li>Six pages designed and built</li>
-          <li>Technology, Services and the design system now on beskar.co</li>
-          <li>Industries designed for Beskar and shipped</li>
-        </ul>
-        <a class="btn btn--solid" href="https://beskar.co/" target="_blank" rel="noopener">Explore beskar.co ↗</a>
-        <p class="cap" style="margin-top:14px">Images show my original Aether work.</p>
+        <p>At Beskar, customers said they couldn't tell what the company makes. I designed an Industries menu and five sector pages built around real parts. Beskar's developer shipped them.</p>
       </div>
     </div>
-    <figure class="closing" data-reveal style="margin:clamp(48px,6vw,72px) 0 0">
-      <div class="media"><video data-inview muted loop playsinline preload="none" poster="media/closing.webp" aria-label="The Aether home page on a laptop"><source src="media/closing.mp4" type="video/mp4"></video></div>
+    <figure data-reveal style="margin:clamp(36px,4vw,52px) 0 0">
+      <div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>beskar.co / industries</span></div><img src="media/beskar-menu.webp" alt="The Industries menu live on beskar.co, previewing Robotics" loading="lazy"></div>
+      <figcaption class="cap">Live on beskar.co · hover a sector to preview it</figcaption>
     </figure>
   </div>
 </section>

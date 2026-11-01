@@ -195,31 +195,49 @@ p:last-child{margin-bottom:0}
 }
 @media(max-width:600px){
   .wrap{width:calc(100% - 32px)}
-  .results{grid-template-columns:1fr}
-  .results div+div{padding-left:0;border-left:0;border-top:1px solid var(--rule);margin-top:18px}
-  .ind-row{grid-template-columns:1fr 1fr}
-  .swatches{grid-template-columns:repeat(3,1fr)}
-  .compare{aspect-ratio:4/3}
+  .sec{padding:44px 0}
+  h2{font-size:21px;line-height:1.25}
+  p{font-size:14px;line-height:1.6;margin-bottom:10px}
+  .label{font-size:10px;margin-bottom:10px}
+  .split .body{margin-top:10px}
+  .hero{margin-top:16px}
+  .hero .media{border-radius:10px}
+  .title{padding-top:28px}
+  .title .logo{height:22px}
+  .title .sub{margin-top:12px;font-size:16px}
+  .meta{gap:16px 20px;margin-top:24px;padding:18px 0}
+  .meta dt{font-size:9.5px;margin-bottom:6px}
+  .meta dd{font-size:13px;line-height:1.5}
+  .status{padding-top:16px;gap:12px}
+  .status p{font-size:13px}
+  .btn{padding:10px 16px;font-size:13px}
+  .results{margin-top:28px}
+  .results div{padding:16px 10px 0 0}
+  .results div+div{padding-left:10px}
+  .results b{font-size:19px}
+  .results span{font-size:9px;letter-spacing:.06em}
+  .compare{aspect-ratio:4/3;margin-top:24px;border-radius:10px}
+  .frame--page{margin-top:24px}
+  .scroller{height:440px}
+  .cap{font-size:10px}
+  .closing{margin-top:32px!important}
+  .closing .media{border-radius:10px}
 }
 </style>
 <style>html,body{overflow:hidden;background:transparent}main{display:block}</style>
 </head>
 <body>
 <main>
-<section class="sec" style="background:#fff">
+<section class="sec">
   <div class="wrap">
     <div class="split" data-reveal>
-      <p class="label">Information architecture</p>
-      <h2>One question per page</h2>
+      <p class="label">Technology</p>
+      <h2>Showing how the factory runs</h2>
       <div class="body">
-        <p>Each page answers one thing a visitor wants to know.</p>
+        <p>Aether's software and hardware stack, shown as one system you can open layer by layer, with a short demo for each product.</p>
       </div>
     </div>
-    <div class="qs">
-      <article class="q" data-reveal><span class="n">01</span><h3>Technology</h3><p class="ask">"How does it work?"</p><p>The software and automation behind production.</p></article>
-      <article class="q" data-reveal style="--d:.08s"><span class="n">02</span><h3>Services</h3><p class="ask">"Can you make my part?"</p><p>Processes, materials, tolerances and finishes.</p></article>
-      <article class="q" data-reveal style="--d:.16s"><span class="n">03</span><h3>Industries</h3><p class="ask">"Do you work in my field?"</p><p>Parts grouped by sector. Added at Beskar.</p></article>
-    </div>
+    <div class="frame frame--page" data-reveal style="position:relative"><div class="frame-bar"><i></i><i></i><i></i><span>aether / technology</span></div><div class="scroller" tabindex="0" aria-label="The redesigned Technology page, full length, scroll to explore"><img src="media/page-technology.webp" alt="The redesigned Technology page, full length" loading="lazy"></div><span class="scroll-hint">Scroll</span></div>
   </div>
 </section>
 </main>
