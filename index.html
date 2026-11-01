@@ -25,13 +25,13 @@ a{color:inherit}
 .label{display:inline-flex;align-items:center;gap:12px;margin:0 0 18px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal2)}
 .label::before{content:"";width:24px;height:1px;background:currentColor;opacity:.6}
 h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.025em;line-height:1.12}
-h2{font-size:clamp(28px,3.4vw,42px);max-width:20ch}
-h3{font-size:18px;letter-spacing:-.01em}
-p{margin:0 0 16px;font-size:16.5px;line-height:1.68;color:var(--ink2)}
+h2{font-size:clamp(24px,2.4vw,32px);max-width:22ch}
+h3{font-size:17px;letter-spacing:-.01em}
+p{margin:0 0 14px;font-size:15px;line-height:1.65;color:var(--ink2)}
 p:last-child{margin-bottom:0}
-.lead{font-size:clamp(18px,1.7vw,21px);line-height:1.55;color:var(--ink)}
+.lead{font-size:clamp(16px,1.3vw,18px);line-height:1.55;color:var(--ink)}
 .cap{margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--ink3)}
-.sec{padding:clamp(72px,9vw,120px) 0}
+.sec{padding:clamp(56px,7vw,96px) 0}
 .sec--tight{padding:clamp(48px,6vw,80px) 0}
 .split{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,6vw,96px);align-items:start}
 .split .body{padding-top:6px}
@@ -58,10 +58,10 @@ p:last-child{margin-bottom:0}
 .hero video{width:100%;height:100%;object-fit:cover}
 .title{padding:clamp(44px,6vw,72px) 0 0}
 .title .logo{height:clamp(26px,3vw,36px);width:auto}
-.title .sub{margin:22px 0 0;max-width:30ch;font-size:clamp(22px,2.6vw,32px);font-weight:300;line-height:1.3;letter-spacing:-.02em;color:var(--ink)}
+.title .sub{margin:22px 0 0;max-width:30ch;font-size:clamp(18px,1.9vw,24px);font-weight:300;line-height:1.35;letter-spacing:-.02em;color:var(--ink)}
 .meta{display:grid;grid-template-columns:repeat(4,1fr);gap:24px 36px;margin-top:clamp(36px,4.5vw,52px);padding:26px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 .meta dt{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal2);margin-bottom:10px}
-.meta dd{margin:0;font-size:14.5px;line-height:1.6;font-weight:500}
+.meta dd{margin:0;font-size:14px;line-height:1.6;font-weight:500}
 .status{display:flex;justify-content:space-between;align-items:center;gap:20px 32px;flex-wrap:wrap;padding:22px 0 0}
 .status p{margin:0;font-size:14px;color:var(--ink2)}
 .status p b{color:var(--ink);font-weight:600}
@@ -70,7 +70,7 @@ p:last-child{margin-bottom:0}
 .results{display:grid;grid-template-columns:repeat(3,1fr);margin-top:clamp(40px,5vw,60px);border-top:1px solid var(--rule)}
 .results div{padding:22px 24px 0 0}
 .results div+div{padding-left:24px;border-left:1px solid var(--rule)}
-.results b{display:block;font-size:clamp(26px,2.8vw,34px);font-weight:300;letter-spacing:-.03em;color:var(--ink)}
+.results b{display:block;font-size:clamp(22px,2.2vw,28px);font-weight:300;letter-spacing:-.03em;color:var(--ink)}
 .results span{display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
 
 
@@ -88,9 +88,9 @@ p:last-child{margin-bottom:0}
 .qs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:clamp(36px,4vw,52px)}
 .q{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:26px 24px 28px}
 .q .n{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.14em;color:var(--teal2)}
-.q h3{margin-top:14px;font-size:21px}
-.q .ask{margin:10px 0 14px;font-size:17px;font-weight:300;color:var(--ink)}
-.q p{font-size:14.5px}
+.q h3{margin-top:14px;font-size:18px}
+.q .ask{margin:8px 0 12px;font-size:15.5px;font-weight:300;color:var(--ink)}
+.q p{font-size:14px}
 
 /* visual language: drawing sheet + spec band */
 .sheet{margin:clamp(36px,4vw,52px) 0 0;border:1px solid var(--rule);border-radius:4px;overflow:hidden;background:#EEF0F0}
@@ -105,7 +105,7 @@ p:last-child{margin-bottom:0}
 .sheet-tb span,.spec-k{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3)}
 .sheet-tb b{display:block;margin-top:4px;font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:500;letter-spacing:.06em;color:var(--ink)}
 .specs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);margin-top:clamp(40px,5vw,64px);padding-top:clamp(28px,3vw,40px);border-top:1px solid var(--rule)}
-.spec-big{margin:18px 0 22px;font-size:clamp(30px,3.4vw,44px);font-weight:300;line-height:1.05;letter-spacing:-.03em;color:var(--ink)}
+.spec-big{margin:16px 0 20px;font-size:clamp(24px,2.6vw,34px);font-weight:300;line-height:1.05;letter-spacing:-.03em;color:var(--ink)}
 .spec-big b{font-weight:600}
 .spec-rows div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-top:1px solid var(--rule)}
 .spec-rows b{font-size:14px;font-weight:600;color:var(--ink)}
@@ -166,7 +166,7 @@ p:last-child{margin-bottom:0}
 
 /* outcome */
 .ticks{list-style:none;margin:22px 0 28px;padding:0;border-top:1px solid var(--rule)}
-.ticks li{display:grid;grid-template-columns:22px 1fr;gap:8px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:15px;line-height:1.5;color:var(--ink)}
+.ticks li{display:grid;grid-template-columns:22px 1fr;gap:8px;padding:12px 0;border-bottom:1px solid var(--rule);font-size:14.5px;line-height:1.5;color:var(--ink)}
 .ticks li::before{content:"→";font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--teal2);line-height:1.8}
 .closing .media{aspect-ratio:16/9;border-radius:16px;background:var(--night)}
 .closing video{width:100%;height:100%;object-fit:cover}
@@ -210,7 +210,7 @@ p:last-child{margin-bottom:0}
 
   <header class="title">
     <img class="logo" src="media/logo-aether.png" alt="Aether">
-    <p class="sub">Redesigning an AI-native manufacturer's website, from information architecture to a visual language and a shipped front end.</p>
+    <p class="sub">Redesigning the website of an automated parts manufacturer.</p>
     <dl class="meta">
       <div><dt>Project type</dt><dd>Website redesign<br>Product design</dd></div>
       <div><dt>Team</dt><dd>Sole designer<br>with founders &amp; engineering</dd></div>
@@ -218,7 +218,7 @@ p:last-child{margin-bottom:0}
       <div><dt>Timeline</dt><dd>June to August 2026</dd></div>
     </dl>
     <div class="status">
-      <p>Originally designed for <b>Aether MFG</b>. Technology, Services and Industries now live at <b>Beskar</b>.</p>
+      <p>Designed for <b>Aether MFG</b>. Technology, Services and Industries now live at <b>Beskar</b>.</p>
       <a class="btn btn--ghost" href="https://beskar.co/" target="_blank" rel="noopener">Visit beskar.co ↗</a>
     </div>
   </header>
@@ -228,16 +228,16 @@ p:last-child{margin-bottom:0}
 <section class="sec">
   <div class="wrap">
     <div class="split">
-      <div data-reveal><p class="label">Overview</p><h2>Making a complex manufacturer easy to understand.</h2></div>
+      <div data-reveal><p class="label">Overview</p><h2>A clearer website for a complex manufacturer.</h2></div>
       <div class="body" data-reveal style="--d:.08s">
-        <p class="lead">Aether sold precision parts made by its own software and factories. Its website had all the facts, but no clear path through them.</p>
-        <p>As the only designer, I led the redesign end to end: competitive research, information architecture, a visual language and the responsive front end, working weekly with the founders and engineering.</p>
+        <p class="lead">Aether made precision parts with its own software and automated factories. The old website had the information, but it was hard to follow.</p>
+        <p>I was the only designer, responsible for research, site structure, visual direction and the front end, with weekly reviews alongside the founders and engineering.</p>
       </div>
     </div>
     <div class="results" data-reveal>
-      <div><b>6 pages</b><span>Redesigned &amp; built in code</span></div>
-      <div><b>5 industries</b><span>New section, shipped at Beskar</span></div>
-      <div><b>WCAG AA</b><span>Contrast across every page</span></div>
+      <div><b>6 pages</b><span>Designed &amp; built</span></div>
+      <div><b>5 industries</b><span>Shipped at Beskar</span></div>
+      <div><b>WCAG AA</b><span>Colour contrast</span></div>
     </div>
   </div>
 </section>
@@ -246,10 +246,9 @@ p:last-child{margin-bottom:0}
 <section class="sec dark">
   <div class="wrap">
     <div class="split">
-      <div data-reveal><p class="label">The vision</p><h2>One blueprint, from a single cell to a global network.</h2></div>
+      <div data-reveal><p class="label">The vision</p><h2>One blueprint, from Erie to the world.</h2></div>
       <div class="body" data-reveal style="--d:.08s">
-        <p class="lead">Aether's plan was to replicate one design: an automated cell, then a full factory in Erie, PA, then identical nodes across the US and the world.</p>
-        <p>Competitor sites sell capacity with catalogs and stock photos. I drew Aether's plan as a technical blueprint instead, so visitors could see where the company was going, not only what it makes today. It became the story no competitor could tell.</p>
+        <p>Aether planned to grow by copying one factory design, starting in Erie, PA, then across the US and abroad. Competitors show catalogs and stock photos. I drew Aether's plan as a blueprint map, so visitors could see where the company was heading.</p>
       </div>
     </div>
     <figure data-reveal style="margin:clamp(36px,4vw,52px) 0 0">
@@ -262,10 +261,10 @@ p:last-child{margin-bottom:0}
 <section class="sec">
   <div class="wrap">
     <div class="split">
-      <div data-reveal><p class="label">The challenge</p><h2>Technical depth needed a clearer way in.</h2></div>
+      <div data-reveal><p class="label">The challenge</p><h2>A lot of information, no clear way in.</h2></div>
       <div class="body" data-reveal style="--d:.08s">
-        <p>Visitors arrived with simple questions: what do you make, how does it work, can you make my part. The old site answered all of them at once, in one dense layer.</p>
-        <p>Competitor research (Xometry, Protolabs, Fictiv) and conversations with the team set the goal: lead with what the company does, explain how it works, then help visitors judge fit.</p>
+        <p>Visitors wanted to know what Aether makes, how it works and whether it can make their part. The old site tried to answer all of it in one place.</p>
+        <p>After reviewing Xometry, Protolabs and Fictiv and talking with the team, I reordered the content around those questions.</p>
       </div>
     </div>
     <div class="compare" id="compare" data-reveal>
@@ -282,13 +281,13 @@ p:last-child{margin-bottom:0}
 <section class="sec" style="background:#fff">
   <div class="wrap">
     <div class="split">
-      <div data-reveal><p class="label">Information architecture</p><h2>Three pages, three customer questions.</h2></div>
-      <div class="body" data-reveal style="--d:.08s"><p>Instead of one page explaining everything, I gave each section a single job. Explaining the system and supporting a buying decision need different levels of detail, so they live in different places.</p></div>
+      <div data-reveal><p class="label">Information architecture</p><h2>Three pages, three questions.</h2></div>
+      <div class="body" data-reveal style="--d:.08s"><p>Each page answers one question, so the detail sits where people look for it.</p></div>
     </div>
     <div class="qs">
-      <article class="q" data-reveal><span class="n">01</span><h3>Technology</h3><p class="ask">"How does it work?"</p><p>The software and automation behind production, shown as one connected system.</p></article>
-      <article class="q" data-reveal style="--d:.08s"><span class="n">02</span><h3>Services</h3><p class="ask">"Can you make my part?"</p><p>Processes, materials, tolerances and finishing, organised around technical fit.</p></article>
-      <article class="q" data-reveal style="--d:.16s"><span class="n">03</span><h3>Industries</h3><p class="ask">"Do you work in my field?"</p><p>Real parts in the context of each sector. Added later, at Beskar.</p></article>
+      <article class="q" data-reveal><span class="n">01</span><h3>Technology</h3><p class="ask">"How does it work?"</p><p>The software and automation behind production.</p></article>
+      <article class="q" data-reveal style="--d:.08s"><span class="n">02</span><h3>Services</h3><p class="ask">"Can you make my part?"</p><p>Processes, materials, tolerances and finishes.</p></article>
+      <article class="q" data-reveal style="--d:.16s"><span class="n">03</span><h3>Industries</h3><p class="ask">"Do you work in my field?"</p><p>Parts grouped by sector. Added at Beskar.</p></article>
     </div>
   </div>
 </section>
@@ -298,7 +297,7 @@ p:last-child{margin-bottom:0}
   <div class="wrap">
     <div class="split">
       <div data-reveal><p class="label">Technology</p><h2>Making the system visible.</h2></div>
-      <div class="body" data-reveal style="--d:.08s"><p>Aether's product was five software and factory layers working as one. I turned the stack into a single object visitors can open layer by layer, then gave each product its own short, real demo instead of a feature list.</p></div>
+      <div class="body" data-reveal style="--d:.08s"><p>Aether's product was a stack of five software and hardware layers. I designed it as one object that opens layer by layer, and gave each product a short demo.</p></div>
     </div>
     <div class="duo">
       <div class="media" data-reveal style="background:#f4f6f7"><video data-inview muted loop playsinline preload="none" poster="media/os-stack.webp" aria-label="The five-layer operating system stack opening layer by layer"><source src="media/os-stack.mp4" type="video/mp4"></video></div>
@@ -316,8 +315,8 @@ p:last-child{margin-bottom:0}
 <section class="sec" style="background:#fff">
   <div class="wrap">
     <div class="split">
-      <div data-reveal><p class="label">Services</p><h2>Built for judging fit.</h2></div>
-      <div class="body" data-reveal style="--d:.08s"><p>Engineers compare suppliers on hard numbers. I organised capabilities, materials, tolerances and finishing into one scannable flow, and replaced stock imagery with photography of parts made on the floor.</p></div>
+      <div data-reveal><p class="label">Services</p><h2>Made for engineers comparing suppliers.</h2></div>
+      <div class="body" data-reveal style="--d:.08s"><p>Engineers look for numbers first. I put capabilities, materials, tolerances and finishes on one scannable page, with photos of parts made on Aether's floor.</p></div>
     </div>
     <div class="duo">
       <div class="frame" data-reveal style="position:relative"><div class="frame-bar"><i></i><i></i><i></i><span>aether / services</span></div><div class="scroller" tabindex="0" aria-label="Services page, scroll to explore"><img src="media/page-services.webp" alt="The redesigned Services page, full length" loading="lazy"></div><span class="scroll-hint">Scroll</span></div>
@@ -334,10 +333,10 @@ p:last-child{margin-bottom:0}
 <section class="sec">
   <div class="wrap">
     <div class="split">
-      <div data-reveal><p class="label">Industries · added at Beskar</p><h2>Answering "what do you actually make?"</h2></div>
+      <div data-reveal><p class="label">Industries · added at Beskar</p><h2>Answering "what do you make?"</h2></div>
       <div class="body" data-reveal style="--d:.08s">
-        <p>After the move to Beskar, customers told the team they couldn't tell what the company makes. I proposed an Industries section: a nav menu where each sector previews its own image, and one page template that leads with real parts.</p>
-        <p>I handed it off as ready pages and a paste-in nav. Beskar's developer shipped it, and has since added two more sectors on the same template.</p>
+        <p>After the move to Beskar, customers said they couldn't tell what the company makes. I designed an Industries menu with image previews and one page template built around real parts.</p>
+        <p>Beskar's developer shipped it and has since added two more sectors.</p>
       </div>
     </div>
     <figure data-reveal style="margin:clamp(36px,4vw,52px) 0 0">
@@ -358,8 +357,8 @@ p:last-child{margin-bottom:0}
 <section class="sec">
   <div class="wrap">
     <div class="split">
-      <div data-reveal><p class="label">Design to code</p><h2>Designed in the browser, shipped as a working site.</h2></div>
-      <div class="body" data-reveal style="--d:.08s"><p>I built the responsive front end myself in HTML, CSS and JavaScript, with motion that explains rather than decorates: a quote flow that plays in place, counters, staged reveals. A working site made each weekly review with the founders and engineers concrete.</p></div>
+      <div data-reveal><p class="label">Design to code</p><h2>Designed and built in code.</h2></div>
+      <div class="body" data-reveal style="--d:.08s"><p>I built the responsive front end myself in HTML, CSS and JavaScript. We reviewed the live build every week, which made feedback quicker.</p></div>
     </div>
     <div class="duo">
       <div class="frame" data-reveal><div class="frame-bar"><i></i><i></i><i></i><span>aether / home</span></div><video data-inview muted loop playsinline preload="none" poster="media/quote-flow.webp" aria-label="Quote to delivery flow on the home page"><source src="media/quote-flow.mp4" type="video/mp4"></video></div>
@@ -377,7 +376,7 @@ p:last-child{margin-bottom:0}
     <div class="split">
       <div data-reveal><p class="label">Visual language</p><h2>The same drawing, in daylight.</h2></div>
       <div class="body" data-reveal style="--d:.08s">
-        <p>The blueprint set the grammar: mono labels, sheet numbers and dimension lines. Across the site I carried it into light, with white surfaces, paper greys and a single teal, closer to a clean production floor than a dark tech brand.</p>
+        <p>The blueprint gave the site its details: mono labels, sheet numbers, dimension lines. On the other pages I set them on light surfaces with one teal accent, closer to a clean factory floor.</p>
       </div>
     </div>
     <figure class="sheet" data-reveal>
@@ -406,7 +405,7 @@ p:last-child{margin-bottom:0}
         <div class="bar-k">
           <div style="flex:44"><b>Paper</b><span>#EFF2F3</span></div><div style="flex:22"><b>Ink</b><span>#13242E</span></div><div style="flex:16"><b>Teal</b><span>#135B7C</span></div><div style="flex:11"><b>Line</b><span>#5FA8CC</span></div><div style="flex:7"><b>Signal</b><span>#2D7B51</span></div>
         </div>
-        <p class="spec-note">Widths show how much of each page the colour covers.</p>
+        <p class="spec-note">Bar widths show how much each colour is used.</p>
       </div>
     </div>
   </div>
@@ -418,14 +417,14 @@ p:last-child{margin-bottom:0}
     <div class="split">
       <div data-reveal><p class="label">Outcome</p><h2>Designed at Aether. Carried into Beskar.</h2></div>
       <div class="body" data-reveal style="--d:.08s">
-        <p>When Aether's founders went separate ways, my site moved with the team to Beskar. They kept Technology and Services and dropped the homepage built around Aether's original story. Industries was added on top.</p>
+        <p>When Aether's founders split, the team moved to Beskar and took the site with them. Beskar kept Technology and Services and dropped the Aether homepage.</p>
         <ul class="ticks">
-          <li>Six pages redesigned and delivered as a working front end</li>
-          <li>Technology, Services and the design system carried into beskar.co</li>
-          <li>Industries proposed, designed and shipped at Beskar</li>
+          <li>Six pages designed and built</li>
+          <li>Technology, Services and the design system now on beskar.co</li>
+          <li>Industries designed for Beskar and shipped</li>
         </ul>
         <a class="btn btn--solid" href="https://beskar.co/" target="_blank" rel="noopener">Explore beskar.co ↗</a>
-        <p class="cap" style="margin-top:14px">Images above show my original Aether work. The live site continues to evolve.</p>
+        <p class="cap" style="margin-top:14px">Images show my original Aether work.</p>
       </div>
     </div>
     <figure class="closing" data-reveal style="margin:clamp(48px,6vw,72px) 0 0">
