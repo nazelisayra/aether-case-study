@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<base href="https://nazelisayra.github.io/aether-case-study/">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Aether MFG | Website redesign case study, Sayra Kurtoglu</title>
 <meta name="description" content="Redesigning an AI-native manufacturer's website: information architecture, a blueprint visual language and a shipped front end, now carried forward at Beskar.">
@@ -451,10 +452,12 @@ p:last-child{margin-bottom:0}
   if(reduce){document.querySelectorAll('video[autoplay]').forEach(function(v){v.pause()})}
   /* before / after */
   var c=document.getElementById('compare'),drag=false;
+  if(c){
   function set(x){var r=c.getBoundingClientRect();c.style.setProperty('--x',Math.max(3,Math.min(97,(x-r.left)/r.width*100))+'%');}
   c.addEventListener('pointerdown',function(e){drag=true;c.setPointerCapture(e.pointerId);set(e.clientX)});
   c.addEventListener('pointermove',function(e){if(drag)set(e.clientX)});
   c.addEventListener('pointerup',function(){drag=false});
+  }
   /* hide "Scroll" hint once used */
   document.querySelectorAll('.scroller').forEach(function(s){s.addEventListener('scroll',function(){var h=s.parentNode.querySelector('.scroll-hint');if(h)h.style.opacity=0},{once:true})});
 })();
