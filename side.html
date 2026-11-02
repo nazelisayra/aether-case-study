@@ -224,24 +224,60 @@ p:last-child{margin-bottom:0}
   .closing{margin-top:32px!important}
   .closing .media{border-radius:10px}
 }
-/* ── side-by-side rows ── */
-.rows{background:#fff}
-.row{display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);gap:clamp(32px,5vw,80px);align-items:start}
-.row+.row{margin-top:clamp(72px,8vw,112px)}
-.row-text{position:sticky;top:32px;padding-top:30px}
-.row-text h2{font-size:clamp(22px,2vw,28px);max-width:none}
-.row-text p{margin-top:12px}
-.row-media .label{margin-bottom:12px}
+/* ── side-by-side story ── */
+.rows{background:#fff;padding:clamp(56px,6vw,80px) 0}
+.row{display:grid;grid-template-columns:minmax(0,.74fr) minmax(0,1.26fr);gap:clamp(28px,4.5vw,72px);align-items:start}
+.row+.row{margin-top:clamp(56px,6vw,84px)}
+.row-text{position:sticky;top:28px;padding-top:28px}
+.row-text .step{display:block;margin-bottom:10px;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal2)}
+.row-text h2{font-size:clamp(21px,1.9vw,26px);max-width:none;line-height:1.2}
+.row-text p{margin:12px 0 0}
+.row-text .note{margin-top:14px;padding-left:12px;border-left:2px solid var(--line);font-size:14px;color:var(--ink)}
+.row-media .label{margin-bottom:10px}
 .row-media figure{margin:0}
 .row-media .compare{margin-top:0}
 .row-media .media{border-radius:12px}
+.row-media .cap{margin-top:10px}
+.frame>img{display:block;width:100%;height:auto}
+/* audience diagram */
+.aud{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.aud-card{padding:22px;border:1px solid var(--rule);border-radius:12px;background:var(--paper)}
+.aud-card.core{background:#fff;border-color:var(--line);box-shadow:0 14px 34px rgba(19,91,124,.10)}
+.aud-card .tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal2)}
+.aud-card h3{margin:10px 0 6px;font-size:17px}
+.aud-card .who{margin:0;font-size:13.5px;color:var(--ink2)}
+.aud-card .q{margin:16px 0 0;padding-top:14px;border-top:1px solid var(--rule);font-size:15px;font-weight:300;color:var(--ink)}
+.aud-card .pages{margin:12px 0 0;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--ink3)}
+.aud-foot{margin:12px 0 0;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--ink3)}
+/* outcome */
+.outcome{padding:clamp(56px,6vw,80px) 0}
+.out-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:22px;border-top:1px solid var(--rule)}
+.out-grid div{padding:18px 18px 0 0}
+.out-grid div+div{padding-left:18px;border-left:1px solid var(--rule)}
+.out-grid b{display:block;font-size:15px;font-weight:600;line-height:1.35;color:var(--ink)}
+.out-grid span{display:block;margin-top:6px;font-size:13.5px;line-height:1.5;color:var(--ink2)}
+.quote-block{display:grid;grid-template-columns:minmax(0,.74fr) minmax(0,1.26fr);gap:clamp(28px,4.5vw,72px);margin-top:clamp(40px,5vw,60px);padding-top:clamp(32px,4vw,44px);border-top:1px solid var(--rule)}
+.quote-block blockquote{margin:0;font-size:clamp(18px,1.7vw,22px);font-weight:300;line-height:1.45;letter-spacing:-.01em;color:var(--ink)}
+.quote-block cite{display:block;margin-top:14px;font-style:normal;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;color:var(--ink3)}
+.quote-block cite b{color:var(--ink);font-weight:500}
+.reflect{margin:0;font-size:15px;line-height:1.65;color:var(--ink2)}
 @media(max-width:900px){
-  .row{grid-template-columns:1fr;gap:18px}
+  .row,.quote-block{grid-template-columns:1fr;gap:16px}
   .row-text{position:static;padding-top:0}
+  .out-grid{grid-template-columns:1fr 1fr}
+  .out-grid div:nth-child(3){padding-left:0;border-left:0}
+  .out-grid div:nth-child(n+3){margin-top:16px;border-top:1px solid var(--rule)}
 }
 @media(max-width:600px){
-  .row+.row{margin-top:56px}
+  .rows,.outcome{padding:44px 0}
+  .row+.row{margin-top:48px}
   .row-text h2{font-size:20px}
+  .aud{grid-template-columns:1fr}
+  .aud-card{padding:18px}
+  .out-grid{grid-template-columns:1fr}
+  .out-grid div,.out-grid div+div{padding:14px 0 0;border-left:0}
+  .out-grid div+div{margin-top:14px;border-top:1px solid var(--rule)}
+  .quote-block blockquote{font-size:17px}
 }
 </style>
 </head>
@@ -289,26 +325,44 @@ p:last-child{margin-bottom:0}
   </div>
 </section>
 
-<section class="sec rows">
+<section class="rows">
   <div class="wrap">
-    <!-- ═══════════ VISION ═══════════ -->
+    <!-- ═══════════ CONTEXT ═══════════ -->
     <div class="row">
       <div class="row-text" data-reveal>
-        <h2>The vision</h2>
-        <p>Aether planned to copy one factory design from Erie, PA to the rest of the US and abroad. I drew that plan as a map so visitors could see where the company was going.</p>
+        <h2>Two audiences, one site</h2>
+        <p>Most competitors sell fast parts to engineers and buyers. Aether also wanted traditional US factories to run on its OS and join its network, so it could grow without building every plant itself.</p>
+        <p>Part buyers were the core customers, so they came first. The vision still had to be clear for future partners.</p>
+        <p class="note">Sole designer, three months, no brand system, and a company that split in two near the end.</p>
       </div>
       <div class="row-media" data-reveal style="--d:.08s">
-        <p class="label">Aether blueprint</p>
-        <div class="media"><video data-inview muted loop playsinline preload="none" poster="media/blueprint.webp" aria-label="Animated blueprint map: from Erie, PA to a worldwide factory network"><source src="media/blueprint.mp4" type="video/mp4"></video></div>
+        <p class="label">Who the site was for</p>
+        <div class="aud">
+          <div class="aud-card core">
+            <span class="tag">Core customers</span>
+            <h3>Part buyers</h3>
+            <p class="who">Engineers and buyers in robotics, medical and aerospace.</p>
+            <p class="q">"Can you make my part, to spec, fast?"</p>
+            <p class="pages">Services · Industries</p>
+          </div>
+          <div class="aud-card">
+            <span class="tag">The vision</span>
+            <h3>Factory partners</h3>
+            <p class="who">US factories still running on traditional methods.</p>
+            <p class="q">"What changes if we run on Aether OS?"</p>
+            <p class="pages">Technology · Blueprint</p>
+          </div>
+        </div>
+        <p class="aud-foot">Most competitors only speak to the first group.</p>
       </div>
     </div>
 
     <!-- ═══════════ CHALLENGE ═══════════ -->
     <div class="row">
       <div class="row-text" data-reveal>
-        <h2>The challenge</h2>
-        <p>Visitors wanted to know what Aether makes, how it works and if it can make their part. The old site answered all of it at once.</p>
-        <p>After looking at Xometry, Protolabs and Fictiv, I gave each of those questions its own page.</p>
+        <h2>The information was there, the story wasn't</h2>
+        <p>Visitors wanted to know what Aether makes, how it works and whether it can make their part. The old site answered everything at once, and the vision was nowhere to be seen.</p>
+        <p>After reviewing Xometry, Protolabs and Fictiv, I gave each question its own page.</p>
       </div>
       <div class="row-media" data-reveal style="--d:.08s">
         <p class="label">Before and after</p>
@@ -322,11 +376,26 @@ p:last-child{margin-bottom:0}
       </div>
     </div>
 
-    <!-- ═══════════ TECHNOLOGY ═══════════ -->
+    <!-- ═══════════ DECISION 1 ═══════════ -->
     <div class="row">
       <div class="row-text" data-reveal>
-        <h2>Technology</h2>
-        <p>Aether's software and hardware stack, shown as one system you can open layer by layer, with a short demo for each product.</p>
+        <span class="step">Decision 01</span>
+        <h2>Draw the vision as a blueprint</h2>
+        <p>Aether's edge was its Fabricator cell and a franchise model for factories. Stock photos couldn't show that, so I drew it like a technical drawing: one factory in Erie, PA, copied across the US and abroad.</p>
+        <p class="note">The founders saw it as a visionary step that set Aether apart.</p>
+      </div>
+      <div class="row-media" data-reveal style="--d:.08s">
+        <p class="label">Aether blueprint</p>
+        <div class="media"><video data-inview muted loop playsinline preload="none" poster="media/blueprint.webp" aria-label="Animated blueprint map: from Erie, PA to a worldwide factory network"><source src="media/blueprint.mp4" type="video/mp4"></video></div>
+      </div>
+    </div>
+
+    <!-- ═══════════ DECISION 2 ═══════════ -->
+    <div class="row">
+      <div class="row-text" data-reveal>
+        <span class="step">Decision 02</span>
+        <h2>One question per page</h2>
+        <p>Technology explains how the factory runs. Services answers whether Aether can make your part. Industries shows real parts by sector. Each page goes deep on one thing.</p>
       </div>
       <div class="row-media" data-reveal style="--d:.08s">
         <p class="label">Technology page</p>
@@ -335,23 +404,41 @@ p:last-child{margin-bottom:0}
       </div>
     </div>
 
-    <!-- ═══════════ SERVICES ═══════════ -->
+    <!-- ═══════════ DECISION 3 ═══════════ -->
     <div class="row">
       <div class="row-text" data-reveal>
-        <h2>Services</h2>
-        <p>Engineers compare suppliers on numbers. Processes, materials, tolerances and finishes sit on one page that is easy to scan.</p>
+        <span class="step">Decision 03</span>
+        <h2>Answer what customers kept asking</h2>
+        <p>Customers often asked which materials and finishes Aether offered, and the old site never said. I added stocked grades and surface finishing to Services.</p>
+        <p class="note">The team said those questions stopped coming in.</p>
       </div>
       <div class="row-media" data-reveal style="--d:.08s">
-        <p class="label">Services page</p>
-        <div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>aether / services</span></div><img src="media/services-crop.webp" alt="The top of the redesigned Services page" loading="lazy" style="display:block;width:100%"></div>
+        <p class="label">Services · materials and finishing</p>
+        <div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>aether / services</span></div><img src="media/services-materials.webp" alt="Materials library and surface finishing sections on the Services page" loading="lazy"></div>
       </div>
     </div>
 
-    <!-- ═══════════ INDUSTRIES ═══════════ -->
+    <!-- ═══════════ DECISION 4 ═══════════ -->
     <div class="row">
       <div class="row-text" data-reveal>
-        <h2>Industries</h2>
-        <p>At Beskar, customers said they couldn't tell what the company makes. I designed an Industries menu and five sector pages built around real parts. Beskar's developer shipped them.</p>
+        <span class="step">Decision 04</span>
+        <h2>Build news and blog for search</h2>
+        <p>I organised News and Blog around categories and guides that match what engineers search for, with a clear featured story and filters.</p>
+        <p class="note">The SEO team approved the designs and reported they would grow traffic.</p>
+      </div>
+      <div class="row-media" data-reveal style="--d:.08s">
+        <p class="label">Blog</p>
+        <div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>aether / blog</span></div><img src="media/blog-crop.webp" alt="The redesigned Aether blog" loading="lazy"></div>
+      </div>
+    </div>
+
+    <!-- ═══════════ BESKAR ═══════════ -->
+    <div class="row">
+      <div class="row-text" data-reveal>
+        <span class="step">After the split</span>
+        <h2>Carried into Beskar</h2>
+        <p>When Aether's founders split, the team moved to Beskar and kept Technology and Services. I then designed an Industries menu and five sector pages built around real parts.</p>
+        <p>Beskar's developer shipped them and has since added two more sectors on the same template.</p>
       </div>
       <div class="row-media" data-reveal style="--d:.08s">
         <p class="label">Industries menu · Robotics</p>
@@ -362,8 +449,34 @@ p:last-child{margin-bottom:0}
   </div>
 </section>
 
+<!-- ═══════════ OUTCOME ═══════════ -->
+<section class="outcome">
+  <div class="wrap">
+    <div data-reveal>
+      <p class="label">Outcome</p>
+      <h2>What it changed</h2>
+    </div>
+    <div class="out-grid" data-reveal>
+      <div><b>Fewer customer questions</b><span>Materials and finishing now answered on the site</span></div>
+      <div><b>Approved by SEO</b><span>News and blog expected to grow traffic</span></div>
+      <div><b>A clear vision</b><span>Blueprint seen by the founders as a step ahead of competitors</span></div>
+      <div><b>Kept after the split</b><span>Technology and Services live at Beskar, Industries extended</span></div>
+    </div>
+    <div class="quote-block" data-reveal>
+      <div>
+        <p class="label">Reflection</p>
+        <p class="reflect">Keeping what the company does separate from its story let the work survive the company changing.</p>
+      </div>
+      <div>
+        <blockquote>"She took on the difficult challenge of translating a complex company … into a brand experience that feels clear, thoughtful, and distinctly Aether."</blockquote>
+        <cite><b>Bowen Tseng</b> · Co-founder, Aether MFG</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════ CLOSING ═══════════ -->
-<section class="sec">
+<section class="sec" style="padding-top:0">
   <div class="wrap">
     <figure class="closing" data-reveal style="margin:0">
       <div class="media"><video data-inview muted loop playsinline preload="none" poster="media/closing-macbook.webp" aria-label="The Aether home page on a MacBook"><source src="media/closing-macbook.mp4" type="video/mp4"></video></div>
