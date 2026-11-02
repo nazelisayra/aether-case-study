@@ -279,6 +279,11 @@ p:last-child{margin-bottom:0}
   .out-grid div+div{margin-top:14px;border-top:1px solid var(--rule)}
   .quote-block blockquote{font-size:17px}
 }
+.close-head{max-width:640px;margin-bottom:clamp(24px,3vw,36px);padding-top:clamp(16px,2vw,24px)}
+.close-head .label{margin:0 0 12px}
+.close-head h2{font-size:clamp(21px,1.9vw,26px);max-width:none}
+.close-head p:not(.label){margin:12px 0 0}
+.close-head .thanks{color:var(--ink);font-weight:500}
 </style>
 </head>
 <body>
@@ -478,6 +483,12 @@ p:last-child{margin-bottom:0}
 <!-- ═══════════ CLOSING ═══════════ -->
 <section class="sec" style="padding-top:0">
   <div class="wrap">
+    <div class="close-head" data-reveal>
+      <p class="label">The home page</p>
+      <h2>Where it started</h2>
+      <p>The Aether home page told the whole story, from one factory in Erie to a network. It didn't make the move to Beskar, but its blueprint language lives on in every page that did.</p>
+      <p class="thanks">Thank you to Bowen, the founders and the Aether team for the trust and the feedback.</p>
+    </div>
     <figure class="closing" data-reveal style="margin:0">
       <div class="media"><video data-inview muted loop playsinline preload="none" poster="media/closing-macbook.webp" aria-label="The Aether home page on a MacBook"><source src="media/closing-macbook.mp4" type="video/mp4"></video></div>
     </figure>
