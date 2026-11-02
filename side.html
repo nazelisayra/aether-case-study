@@ -281,6 +281,30 @@ p:last-child{margin-bottom:0}
 }
 .reflect+.reflect{margin-top:12px}
 .reflect.thanks{color:var(--ink);font-weight:500}
+.support{margin-top:clamp(28px,3.5vw,44px)}
+.support-head{display:grid;grid-template-columns:minmax(0,.74fr) minmax(0,1.26fr);gap:clamp(28px,4.5vw,72px);align-items:end;margin-bottom:16px}
+.support-head h3{font-size:16px;line-height:1.35}
+.support-head p{margin:0;font-size:14px}
+.support figure{margin:0}
+.support .cap b{color:var(--teal2);font-weight:500}
+.d2{margin-top:clamp(64px,7vw,96px);padding-top:clamp(48px,5vw,64px);border-top:1px solid var(--rule)}
+.d2-head{max-width:640px;margin-bottom:clamp(28px,3vw,40px)}
+.d2-head .step{display:block;margin-bottom:10px;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal2)}
+.d2-head h2{font-size:clamp(21px,1.9vw,26px);max-width:none;line-height:1.2}
+.d2-head p{margin:12px 0 0}
+.d2-card .d2-text{margin-bottom:14px}
+.d2-card .tag{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal2)}
+.d2-card h3{margin:6px 0 0;font-size:17px;font-weight:500}
+.d2-card p{margin:6px 0 0;font-size:14px;max-width:52ch}
+.d2-wide{display:grid;grid-template-columns:minmax(0,.74fr) minmax(0,1.26fr);gap:clamp(28px,4.5vw,72px);align-items:start}
+.d2-wide .d2-text{padding-top:24px}
+.d2-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,2.5vw,32px);margin-top:clamp(32px,4vw,48px)}
+.d2+.row{margin-top:clamp(64px,7vw,96px);padding-top:clamp(48px,5vw,64px);border-top:1px solid var(--rule)}
+@media(max-width:900px){
+  .support-head,.d2-wide{grid-template-columns:1fr;gap:8px}
+  .d2-wide .d2-text{padding-top:0}
+  .d2-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -392,45 +416,38 @@ p:last-child{margin-bottom:0}
       </div>
     </div>
 
+    <!-- ═══════════ BLUEPRINT IN USE ═══════════ -->
+    <div class="support" data-reveal>
+      <div class="support-head">
+        <h3>The same drawing language, inside the product story</h3>
+        <p>I carried the blueprint into the quote-to-delivery flow. Production, the step buyers can't see, is drawn with technically accurate machining views instead of a stock factory photo.</p>
+      </div>
+      <figure>
+        <div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>aether / quote to delivery · production</span></div><video data-inview muted loop playsinline preload="none" poster="media/production-anim.webp" aria-label="Animated production step of the quote-to-delivery flow"><source src="media/production-anim.mp4" type="video/mp4"></video></div>
+        <p class="cap">Upload → Quote → <b>Production</b> → Inspection → Shipment → Delivered</p>
+      </figure>
+    </div>
+
     <!-- ═══════════ DECISION 2 ═══════════ -->
-    <div class="row">
-      <div class="row-text" data-reveal>
+    <div class="d2">
+      <div class="d2-head" data-reveal>
         <span class="step">Decision 02</span>
-        <h2>One question per page</h2>
-        <p>Technology explains how the factory runs. Services answers whether Aether can make your part. Industries shows real parts by sector. Each page goes deep on one thing.</p>
+        <h2>Build the hierarchy around buyers' questions</h2>
+        <p>With the vision set, the rest of the site had to be easy to act on. Each page answers one question, and the details follow in the order buyers look for them.</p>
       </div>
-      <div class="row-media" data-reveal style="--d:.08s">
-        <p class="label">Technology page</p>
+      <div class="d2-card d2-wide" data-reveal>
+        <div class="d2-text"><span class="tag">Technology</span><h3>"How does it work?"</h3><p>The software and hardware stack as one system, with a short demo for each product.</p></div>
         <div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>beskar.co / technology</span></div><video data-inview muted loop playsinline preload="none" poster="media/beskar-technology-page.webp" aria-label="Scrolling through the Technology page on beskar.co"><source src="media/beskar-technology-page.mp4" type="video/mp4"></video></div>
-        <p class="cap">Live on beskar.co</p>
       </div>
-    </div>
-
-    <!-- ═══════════ DECISION 3 ═══════════ -->
-    <div class="row">
-      <div class="row-text" data-reveal>
-        <span class="step">Decision 03</span>
-        <h2>Answer what customers kept asking</h2>
-        <p>Customers often asked which materials and finishes Aether offered, and the old site never said. I added stocked grades and surface finishing to Services.</p>
-        <p class="note">The team said those questions stopped coming in.</p>
-      </div>
-      <div class="row-media" data-reveal style="--d:.08s">
-        <p class="label">Services · materials and finishing</p>
-        <div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>aether / services</span></div><img src="media/services-materials.webp" alt="Materials library and surface finishing sections on the Services page" loading="lazy"></div>
-      </div>
-    </div>
-
-    <!-- ═══════════ DECISION 4 ═══════════ -->
-    <div class="row">
-      <div class="row-text" data-reveal>
-        <span class="step">Decision 04</span>
-        <h2>Build news and blog for search</h2>
-        <p>I organised News and Blog around categories and guides that match what engineers search for, with a clear featured story and filters.</p>
-        <p class="note">The SEO team approved the designs and reported they would grow traffic.</p>
-      </div>
-      <div class="row-media" data-reveal style="--d:.08s">
-        <p class="label">Blog</p>
-        <div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>aether / blog</span></div><img src="media/blog-crop.webp" alt="The redesigned Aether blog" loading="lazy"></div>
+      <div class="d2-grid">
+        <div class="d2-card" data-reveal>
+          <div class="d2-text"><span class="tag">Services</span><h3>"Do you have my material and finish?"</h3><p>Customers kept asking, and the old site never said. I added stocked grades and surface finishing. The team said those questions stopped.</p></div>
+          <div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>aether / services</span></div><img src="media/services-materials.webp" alt="Materials library and surface finishing on the Services page" loading="lazy"></div>
+        </div>
+        <div class="d2-card" data-reveal style="--d:.08s">
+          <div class="d2-text"><span class="tag">News &amp; blog</span><h3>"Where do I learn more?"</h3><p>Categories and guides that match what engineers search for. The SEO team approved the designs and expects more traffic.</p></div>
+          <div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>aether / blog</span></div><img src="media/blog-crop.webp" alt="The redesigned Aether blog" loading="lazy"></div>
+        </div>
       </div>
     </div>
 
