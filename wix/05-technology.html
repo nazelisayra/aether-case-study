@@ -48,6 +48,7 @@ p:last-child{margin-bottom:0}
 
 /* browser frame + scroll window */
 .frame{border:1px solid var(--rule);border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 28px 64px rgba(19,36,46,.12)}
+.frame>video{display:block;width:100%;height:auto;background:#EEF1F2}
 .frame-bar{display:flex;align-items:center;gap:7px;padding:11px 14px;background:#F6F8F9;border-bottom:1px solid var(--rule)}
 .frame-bar i{width:8px;height:8px;border-radius:50%;background:rgba(19,36,46,.16)}
 .frame-bar span{margin-left:8px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.06em;color:var(--ink3)}
@@ -237,7 +238,10 @@ p:last-child{margin-bottom:0}
         <p>Aether's software and hardware stack, shown as one system you can open layer by layer, with a short demo for each product.</p>
       </div>
     </div>
-    <div class="frame frame--page" data-reveal style="position:relative"><div class="frame-bar"><i></i><i></i><i></i><span>aether / technology</span></div><div class="scroller" tabindex="0" aria-label="The redesigned Technology page, full length, scroll to explore"><img src="media/page-technology.webp" alt="The redesigned Technology page, full length" loading="lazy"></div><span class="scroll-hint">Scroll</span></div>
+    <figure data-reveal style="margin:clamp(36px,4vw,52px) 0 0">
+      <div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>beskar.co / technology</span></div><video data-inview muted loop playsinline preload="none" poster="media/beskar-technology-page.webp" aria-label="Scrolling through the Technology page on beskar.co"><source src="media/beskar-technology-page.mp4" type="video/mp4"></video></div>
+      <figcaption class="cap">Live on beskar.co · Technology page</figcaption>
+    </figure>
   </div>
 </section>
 </main>
