@@ -281,6 +281,27 @@ p:last-child{margin-bottom:0}
 }
 .reflect+.reflect{margin-top:12px}
 .reflect.thanks{color:var(--ink);font-weight:500}
+.testimonial{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(20px,4vw,64px);align-items:end;margin:clamp(36px,4.5vw,56px) 0 0;padding:clamp(24px,3vw,36px) clamp(24px,3.5vw,44px);background:#fff;border:1px solid var(--rule);border-left:3px solid var(--teal);border-radius:12px}
+.testimonial blockquote{margin:0}
+.testimonial blockquote p{margin:0;font-size:clamp(18px,1.7vw,22px);font-weight:300;line-height:1.45;letter-spacing:-.01em;color:var(--ink)}
+.testimonial blockquote .t2{margin-top:14px;font-size:15px;line-height:1.6;color:var(--ink2)}
+.testimonial figcaption{white-space:nowrap;text-align:right}
+.testimonial figcaption b{display:block;font-size:14px;font-weight:600;color:var(--ink)}
+.testimonial figcaption span{display:block;margin-top:4px;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.08em;color:var(--ink3)}
+.reflect-block{margin-top:clamp(40px,5vw,60px);padding-top:clamp(28px,3.5vw,40px);border-top:1px solid var(--rule)}
+.reflect-cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px)}
+.reflect-cols .reflect{margin:0;font-size:16px;line-height:1.6;color:var(--ink)}
+@media(max-width:900px){
+  .testimonial{grid-template-columns:1fr;gap:16px}
+  .testimonial figcaption{text-align:left}
+  .reflect-cols{grid-template-columns:1fr;gap:12px}
+}
+@media(max-width:600px){
+  .testimonial{padding:20px}
+  .testimonial blockquote p{font-size:17px}
+  .testimonial blockquote .t2{font-size:14px}
+  .reflect-cols .reflect{font-size:14.5px}
+}
 .support{margin-top:clamp(28px,3.5vw,44px)}
 .support-head{display:grid;grid-template-columns:minmax(0,.74fr) minmax(0,1.26fr);gap:clamp(28px,4.5vw,72px);align-items:end;margin-bottom:16px}
 .support-head h3{font-size:16px;line-height:1.35}
@@ -348,6 +369,13 @@ p:last-child{margin-bottom:0}
       <div><b>6</b><span>Aether website</span></div>
       <div><b>5</b><span>Industries, at Beskar</span></div>
     </div>
+    <figure class="testimonial" data-reveal>
+      <blockquote>
+        <p>"She took on the difficult challenge of translating a complex company … into a brand experience that feels clear, thoughtful, and distinctly Aether."</p>
+        <p class="t2">"What impressed us most was not only her design talent, but also the ownership, curiosity, and confidence she brought to an ambiguous, fast-moving environment."</p>
+      </blockquote>
+      <figcaption><b>Bowen Tseng</b><span>Co-founder, Aether MFG</span></figcaption>
+    </figure>
   </div>
 </section>
 
@@ -481,15 +509,11 @@ p:last-child{margin-bottom:0}
       <div><b>A clear vision</b><span>Blueprint seen by the founders as a step ahead of competitors</span></div>
       <div><b>Kept after the split</b><span>Technology and Services live at Beskar, Industries extended</span></div>
     </div>
-    <div class="quote-block" data-reveal>
-      <div>
-        <p class="label">Reflection</p>
+    <div class="reflect-block" data-reveal>
+      <p class="label">Reflection</p>
+      <div class="reflect-cols">
         <p class="reflect">Keeping what the company does separate from its story let the work survive the company changing.</p>
         <p class="reflect">The Aether home page told that story, from one factory in Erie to a network. It didn't make the move to Beskar, but its blueprint language lives on in every page that did.</p>
-      </div>
-      <div>
-        <blockquote>"She took on the difficult challenge of translating a complex company … into a brand experience that feels clear, thoughtful, and distinctly Aether."</blockquote>
-        <cite><b>Bowen Tseng</b> · Co-founder, Aether MFG</cite>
       </div>
     </div>
     <figure class="closing" data-reveal style="margin:clamp(32px,4vw,48px) 0 0">
